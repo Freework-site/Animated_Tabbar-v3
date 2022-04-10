@@ -1,0 +1,120 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root
+{
+    --bg-1: #6d60e3;
+    --bg-2:#5067d7;
+    --bg-3: #22cbc8;
+    --bg-4:#79e3a3;
+    --bg-5: #fdc93f;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eeeeee;
+    overflow: hidden;
+}
+.tabbar
+{
+    position: relative;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabbar .card
+{
+    position: relative;
+    width: 80px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.tabbar .card .side
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+.tabbar .card .side.side1
+{
+    width: 80px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom;
+    z-index: 2;
+}
+.tabbar .card .side.side1 .icon
+{
+    font-size: 1.3em;
+    color: #fff;
+}
+.tabbar .card .one
+{
+    background-color: var(--bg-1);
+}
+.tabbar .card .two
+{
+    background-color: var(--bg-2);
+}
+.tabbar .card .three
+{
+    background-color: var(--bg-3);
+}
+.tabbar .card .four
+{
+    background-color: var(--bg-4);
+}
+.tabbar .card .five
+{
+    background-color: var(--bg-5);
+}
+.tabbar .card:hover .side.side1
+{
+    transform: translateY(-100%) rotateX(90deg);
+    background-color: #fff;
+}
+.tabbar .card .side.side2 .icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.1em;
+}
+.tabbar .card .side.side2
+{
+    width: 80px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+    color: #fff;
+}
+.tabbar .card:hover .side.side2
+{
+    transform: translateY(0) rotateX(0deg);
+}
